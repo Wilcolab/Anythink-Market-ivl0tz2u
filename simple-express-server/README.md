@@ -1,18 +1,6 @@
 # Simple Express Server
 
-This project is a simple Express server that listens on port 8001. It is designed to demonstrate the basic setup of an Express application using Docker and Yarn.
-
-## Project Structure
-
-```
-simple-express-server
-├── src
-│   └── server.js        # Entry point of the application
-├── package.json         # Configuration file for npm
-├── yarn.lock            # Dependency lock file
-├── Dockerfile           # Dockerfile to build the application image
-└── README.md            # Project documentation
-```
+This project is a simple Express server that listens on port 8001. It is designed to be lightweight and serves as a starting point for building more complex applications.
 
 ## Getting Started
 
@@ -20,43 +8,46 @@ To get started with this project, follow the instructions below.
 
 ### Prerequisites
 
-- Ensure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed on your machine.
-- Docker should also be installed to build and run the application in a container.
+Make sure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed on your machine.
 
-### Running the Server Locally
+### Installation
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/microsoft/vscode-remote-try-node.git
    cd simple-express-server
    ```
 
-2. Install dependencies:
+2. Install the dependencies:
    ```
    yarn install
    ```
 
-3. Start the server using Nodemon:
-   ```
-   yarn start
-   ```
+### Running the Server
 
-The server will be running on `http://localhost:8001`.
+To start the server with automatic reloading, use the following command:
+```
+yarn start
+```
 
-### Building and Running with Docker
+The server will listen on port 8001.
 
-1. Build the Docker image:
-   ```
-   docker build -t simple-express-server .
-   ```
+### Building the Docker Image
 
-2. Run the Docker container:
-   ```
-   docker run -p 8001:8001 simple-express-server
-   ```
+To build the Docker image, run:
+```
+docker build -t simple-express-server .
+```
+
+### Running the Docker Container
+
+To run the Docker container, use:
+```
+docker run -p 8001:8001 simple-express-server
+```
 
 The server will be accessible at `http://localhost:8001`.
 
-## License
+### License
 
 This project is licensed under the MIT License.
